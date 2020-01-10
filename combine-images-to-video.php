@@ -1,6 +1,5 @@
 <?php
-    namespace PHPVideoToolkit;
-    include_once 'includes/bootstrap.php';
+    include_once 'includes/config.php';
     
     $config = @simplexml_load_file("profile/".$_POST['profile'].".xml");
     include_once 'function.php';

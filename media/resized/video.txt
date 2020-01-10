@@ -1,0 +1,14 @@
+file 'intro.jpg'
+duration 6
+file '1.jpg'
+duration 20
+file '2.jpg'
+duration 20
+file '3.jpg'
+duration 20
+file '4.jpg'
+duration 20
+file '5.jpg'
+duration 20
+file 'outro.jpg'
+duration 6
