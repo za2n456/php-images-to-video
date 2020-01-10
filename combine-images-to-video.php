@@ -1,6 +1,4 @@
-<?php
-    include_once 'includes/config.php';
-    
+<?php  
     $config = @simplexml_load_file("profile/".$_POST['profile'].".xml");
     include_once 'function.php';
 	
