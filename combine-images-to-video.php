@@ -1,6 +1,6 @@
 <?php  
-    $config = @simplexml_load_file("profile/".$_POST['profile'].".xml");
     include_once 'function.php';
+    $config = @simplexml_load_file("profile/".$_POST['profile'].".xml");
 	
 	if (isset($_FILES['file'])) {
 	$name = $_FILES['file']['name'];

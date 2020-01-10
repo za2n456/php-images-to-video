@@ -29,33 +29,15 @@
 		<?php
 		if(isset($_GET['p'])) {
 			$config = @simplexml_load_file("profile/".$_GET['p'].".xml");
-		    if(isset($_POST['submit'])) {
-		    	$name = $_POST['name'];
-		        $narasi = $_POST['narasi'];
-		        $title = $_POST['title'];
-		        $content = $_POST['content'];
-		        $images = $_POST['images'];
-		        $audio = $_POST['audio'];
-		        $durasi = $_POST['durasi'];
-		        $text = $_POST['text'];
-				
-		    	$name = stripslashes($name);
-		        $narasi = stripslashes($narasi);
-		        $title = stripslashes($title);
-		        $content = stripslashes($content);
-		        $images = stripslashes($images);
-		        $audio = stripslashes($audio);
-		        $durasi = stripslashes($durasi);
-		        $text = stripslashes($text);
-		        
-				$name = base64_encode($name);
-		        $narasi = base64_encode($narasi);
-		        $title = base64_encode($title);
-		        $content = base64_encode($content);
-		        $images = base64_encode($images);
-		        $audio = base64_encode($audio);
-		        $durasi = base64_encode($durasi);
-		        $text = base64_encode($text);
+		    if(isset($_POST['submit'])) {		        
+				$name = base64_encode(stripslashes($_POST['name']));
+		        $narasi = base64_encode(stripslashes($_POST['narasi']));
+		        $title = base64_encode(stripslashes($_POST['title']));
+		        $content = base64_encode(stripslashes($_POST['content']));
+		        $images = base64_encode(stripslashes($_POST['images']));
+		        $audio = base64_encode(stripslashes($_POST['audio']));
+		        $durasi = base64_encode(stripslashes($_POST['durasi']));
+		        $text = base64_encode(stripslashes($_POST['text']));
 
 		        $xml = file_get_contents("profile/".$_GET['p'].".xml");
 		        $xml = str_replace("<name>".$config->name."</name>","<name>".$name."</name>",$xml);

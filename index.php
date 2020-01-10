@@ -31,8 +31,6 @@
         <?php
         if(isset($_POST['generate'])) {
 			include 'combine-images-to-video.php';
-			$filename = basename($process->getOutput()->getMediaPath());
-			file_put_contents('tmp/log.txt', $filename."\n", FILE_APPEND | LOCK_EX);
 		}
 		?>
 		
@@ -57,14 +55,6 @@
 				<a class="btn btn-primary" href="profile.php">List Profile</a>
 			</div>
         </form>
-			
-	<hr/>
-	<center>
-	<p>&copy; 2013 <b>Uler Tools</b> | All Rights Reserved.</p>
-	
-	<a href="/#" title="Uler Team" style="margin-right:10px;"><img src="images/uler.png"/></a>
-	<a href="/#" title="dropColors"><img src="images/favicon.png"/></a>
-	</center>
 
 </div>
 </body>
